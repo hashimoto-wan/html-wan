@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>居酒屋</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="contain">
+                <h1>飲みたい日の一案として</h1>
+                <nav>
+                    <ul class="shop" id="shop">
+                        <br><br>
+                        <li><a href="#twilight">ワイワイした空間</a></li>
+                        <br>
+                        <li><a href="#yuugen">おいしい焼き魚がおすすめ</a></li>
+                        <br>
+                        <li><a href="#kagaribi">隠れ家のようなお店</a></li>
+                    </ul>
+                </nav>
+
+                <div class="image-container">
+                    <img id="image" src="header/外観.jpg" alt="Image">
+                </div>
+                <div class="resever"><a href="reservation.html">ご予約はこちらから</a></div>
+            </div>
+        </header>
+
+        <main>
+            <section id="twilight" class="twilight">
+                <div class="contain">
+                    <h2 class="shopName">トワイライト食堂</h2>
+
+                    <div class="introduction">
+                        扉と開けるとレトロで独特な世界。<br>
+                        人気ＮＯ.１の「タコめし」はたこの旨味がたまらない一品です。<br>
+                        ドリンクも２００種類以上あり、各料理に合うお酒をチョイスして飲むのもＧＯＯＤ◎<br>
+                        <br><a href="https://www.twilight-shokudo.com/" target="_self">
+                            <div class="black">リンクはこちら</div>
+                        </a>
+                    </div>
+
+                    <div class="gallery">
+                        <img class="img" id="image1" src="トワイライト食堂/店内.jpg" alt="Image">
+                        <img class="img" id="image2" src="トワイライト食堂/外観.jpg" alt="Image">
+                        <img class="img" id="image3" src="トワイライト食堂/宮崎赤鶏のたたき.jpg" alt="Image">
+                        <img class="img" id="image6" src="トワイライト食堂/紅ショウガだし巻き卵.jpg" alt="Image">
+                        <img class="img" id="image7" src="トワイライト食堂/タコ飯.jpg" alt="Image">
+                    </div>
+                </div>
+            </section>
+
+            <section id="yuugen" class="yuugen">
+                <div class="contain">
+                    <h2 class="shopname">雄源</h2>
+                    <div class="introduction">
+                        久留米エリアの親子３世代で使える焼鳥店【くるめ串 雄源】。<br>
+                        北海道より直送の鮮魚を使用した「原始焼き」をはじめ、全５０種の<br>
+                        「野菜巻串」や豊富な種類の一品料理、１００種のワインや<br>
+                        幅広い日本酒も取り揃えている長時間いても楽しめるお店。<br>
+                        <br><a href="https://www.instagram.com/yakitoriyugen/" target="_self">リンクはこちら</a>
+                    </div>
+
+                    <div class="gallery">
+                        <img class="img" id="image1" src="雄源/雄源外観.jpg" alt="Image">
+                        <img class="img" id="image2" src="雄源/店内.jpg" alt="Image">
+                        <img class="img" id="image3" src="雄源/焼き魚.jpg" alt="Image">
+                        <img class="img" id="image4" src="雄源/カンパチカマ.jpg" alt="Image">
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="kagaribi" class="kagaribi">
+                <div class="contain">
+                    <h2 class="shopname">旬菜炭火焼 燎（かがりび）</h2>
+                    <div class="introduction">
+                        久留米市小頭町公園そばの備長炭で焼き上げるはかた地どりの<br>
+                        こだわりの焼き鳥居酒屋。１匹丸ごと仕入れるので鮮度抜群！<br>
+                        オビ（内もも）やソリレス（モモの付け根）など他では<br>
+                        あまり見られない希少部位あります。<br>
+                        山崎、白州をはじめ国産ウイスキーも多数。<br>
+                        <br><a href="https://www.instagram.com/yakitori.kagaribi.kurume/" target="_self"></a>
+                        <div class="black">リンクはこちら</div>
+                    </div>
+                    <div class="gallery">
+                        <img class="img" id="image1" src="燎/外観.jpg" alt="Image">
+                        <img class="img" id="image2" src="燎/店内.jpg" alt="Image">
+                        <img class="img" id="image3" src="燎/焼き鳥.jpg" alt=" Image">
+                        <img class="img" id="image4" src="燎/焼き工程.jpg" alt="Image">
+                        <img class="img" id="image7" src="燎/だし.jpg" alt="Image">
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <script>
+
+            //トップの写真配列↓
+            const images = [
+                'header/外観.jpg',
+                'header/焼き魚.jpg',
+                'header/焼き鳥.jpg',
+                'header/乾杯.jpg'
+            ];
+            let currentImageIndex = 0;//画像が何番目のものか追跡する
+            function changeImage() {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                document.getElementById('image').src = images[currentImageIndex];
+            }
+            setInterval(changeImage, 3000);
+
+
+            //各項目の写真表示↓
+
+            const observerOptions = {
+                root: null,  // ビューポート（画面）を基準に監視
+                rootMargin: '0px',  // マージンを設定しない
+                threshold: 0.1  // 画像が10%表示された時に発動
+            };
+
+            // IntersectionObserverのコールバック関数
+            const observerCallback = (entries, observer) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        const image = entry.target;
+                        // 各画像が順番に表示されるように遅延を設定
+                        setTimeout(() => {
+                            image.classList.add('show'); // 画像にshowクラスを追加し、アニメーションを発動
+                        }, index * 300); // 300msの遅延で順番に表示
+
+                        observer.unobserve(image); // 1度表示したら監視を停止
+                    }
+                });
+            };
+
+            // IntersectionObserverを作成
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+            // すべての画像を監視
+            const imagesToObserve = document.querySelectorAll('.img');
+            imagesToObserve.forEach(image => {
+                observer.observe(image); // 各画像に対して監視を開始
+            });
+        </script>
+
+</body>
+
+</html>

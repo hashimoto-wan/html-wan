@@ -1,0 +1,99 @@
+/* フォント設定 */
+body {
+    font-family: 'Noto Serif JP', serif;
+    background-color: #000000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* フォーム全体のデザイン */
+.form-container {
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    padding: 30px;
+    width: 80%;
+    max-width: 500px;
+    margin: 20px;
+}
+
+/* ヘッダー（タイトル）のスタイル */
+h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #f1f0f0;
+}
+
+/* ラベルのスタイル */
+label {
+    display: block;
+    /* 同じ行にこないように */
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #f1f0f0;
+}
+
+/* 入力フォームのスタイル */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+select[name="shop"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px 0;
+    border: 1px solid #ddd;
+    color: #000000;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="number"]:focus,
+select[name="shop"] {
+    outline: none;
+    border-color: #f1f0f0;
+}
+
+/* 送信ボタンのスタイル */
+input[type="submit"] {
+    background-color: #333333;
+    color: #f1f0f0;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #444444;
+}
+
+/* フォーム内のマージン調整 */
+form {
+    display: block;
+    margin: 0;
+}
+
+.home {
+    margin: 20px 0 0 400px;
+
+}
+
+.home a {
+    font-weight: lighter;
+    text-decoration: none;
+    color: #ddd;
+}
+
+a:hover {
+    color: rgb(43, 126, 98);
+}
